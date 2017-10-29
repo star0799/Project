@@ -14,7 +14,7 @@
          <div class="form-group">
             <label class="col-sm-2 control-label">密碼：</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" placeholder="請輸入信箱" id="naper" name="naper" />
+                <input type="password" class="form-control" placeholder="請輸密碼" id="naper" name="naper" />
             </div>
         </div>
 

@@ -14,7 +14,10 @@
          <div class="form-group">
             <label class="col-sm-2 control-label">性別：</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" placeholder="性別" id="naper" name="naper" />
+                <select id="sex" name="sex" class="form-control col-sm-4">
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
             </div>
         </div>
 
