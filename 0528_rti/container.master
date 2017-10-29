@@ -1,0 +1,46 @@
+﻿<%@ master language="VB" CodeFile="container.master.vb" inherits="container" %>
+<%@ Register Src="controls/top.ascx" TagName="top" TagPrefix="uc" %>
+<%@ Register Src="controls/leftpane.ascx" TagName="leftpane" TagPrefix="uc" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="zh-tw">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>典藏央廣</title>
+<meta name="description" content=" " />
+<meta name="keywords" content=" " />
+<meta name="title" content="典藏央廣" />
+<link rel="stylesheet" href="css/jquery.ui.all.css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/mod.css" rel="stylesheet" type="text/css" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/mainscript.js"></script>
+
+<script src="js/jquery.ui.core.min.js"></script>
+<script src="js/jquery.ui.widget.min.js"></script>
+<script src="js/jquery.ui.datepicker.js"></script>
+<script src="js/jquery.ui.datepicker-zh-TW.js"></script>
+</head>
+
+<body>
+<form id="aspnetForm" runat="server">
+  <asp:ScriptManager ID="ScriptManager1" EnableScriptGlobalization="true" EnableScriptLocalization="true" runat="server" />
+  <div class="bg">
+    <div id="wrap" class="clearfix">
+	  <uc:top ID="Top1" runat="server" />
+      <div id="wrap-main" class="clearfix">
+	  <uc:leftpane ID="Leftpane1" runat="server" />
+        <div id="contentWrap">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class='footertxt'>版權所有© 財團法人中央廣播電臺   地址:臺北市104中山區北安路55號    電話:886-2-28856168    FAX:886-2-28862382</div>
+    </div>
+  </div>
+</form>
+</body>
+</html>

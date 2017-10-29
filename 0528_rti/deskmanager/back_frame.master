@@ -1,0 +1,289 @@
+﻿<%@ master language="VB" CodeFile="back_frame.master.vb" inherits="deskmanager_back_frame" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>後台管理系統</title>
+<style type="text/css">
+<!--
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+-->
+</style>
+<link href="web.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../css/jquery.ui.all.css" />
+<script language="JavaScript" type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script src="../js/jquery.ui.core.min.js"></script>
+<script src="../js/jquery.ui.widget.min.js"></script>
+<script src="../js/jquery.ui.datepicker.js"></script>
+<script src="../js/jquery.ui.datepicker-zh-TW.js"></script>
+<script src="../js/common.js" language="JavaScript"></script>
+</head>
+
+<body class="Bg"><form id="form1" runat="server">
+<asp:ScriptManager ID="ScriptManager1" EnableScriptGlobalization="true" EnableScriptLocalization="true" runat="server" >
+</asp:ScriptManager>
+<table width="100%" height="100%"  border="0" cellpadding="0" cellspacing="0">
+
+  <% if (noframe.length = 0) then %>
+  <tr>
+    <td height="80" align="left" valign="top" class="Topbg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="middle" class="TitleMidCenter">
+          <img src="images/img_02.jpg" border="0" align="absmiddle" />
+          <span id="spnCompName" runat="server" style="text-align:middle;">公司名稱</span>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <% end if %>
+  
+  <tr>
+    <td align="left" height="100%" valign="top" class="Main"><table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+      
+      <tr>
+        <td align="left" valign="top" height="100%" class="MainMidCenter"><table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+          
+          <% if (noframe.length = 0) then %>
+          <tr>
+            <td height="30" align="center" valign="top" class="TopNavBg"><table width="98%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="1%" align="left" valign="top"><table border="0" cellspacing="0" cellpadding="0" id="tblCPMenu" runat="server">
+                      <tr>
+                        <td align="left" valign="top" nowrap><img id="imgCPMenu" runat="server" src="images/Icon_Sys01.gif" width="17" height="17"></td>
+                        <td align="left" valign="middle" nowrap class="Text01"><a href="#" id="hlkCPMenu" runat="server" class="Text01Link">ITEM</a></td>
+                        <td align="left" valign="middle" class="Point01">&nbsp;</td>
+                        </tr>
+                      </table></td>
+                    <td align="left" valign="top" style="display:none"><table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="left" valign="middle"><asp:UpdatePanel ID="upLang" runat="server" UpdateMode="Conditional">
+                          <ContentTemplate>
+                            <asp:DropDownList ID="ddlSiteLang" runat="server" AutoPostBack="True">
+                              <asp:ListItem Selected="True" Value="big5">繁體中文</asp:ListItem>
+                              </asp:DropDownList>
+                            </ContentTemplate>
+                          </asp:UpdatePanel>                        </td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table>                  </td>
+                <td align="right" valign="top"><table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="left" valign="top" style="display:none"><img src="images/Icon_Sys04.3.gif" width="16" height="16"></td>
+                    <td align="left" valign="middle" nowrap class="Text02" style="display:none"><a href="#.pdf" target="_blank" class="Text02Link">HELP</a></td>
+                    <td width="15" align="left" valign="middle" style="display:none">&nbsp;</td>
+                    <td align="left" valign="top"><img src="images/Icon_Top05.gif" width="16" height="16"></td>
+                    <td align="left" valign="middle" nowrap class="Text02"><a href="#" target="_blank" class="Text02Link" id="hlkFrontSite" runat="server">瀏覽前台</a></td>
+                    <td width="15" align="left" valign="middle">&nbsp;</td>
+                    <td align="left" valign="top"><img src="images/Icon_Top06.gif" width="16" height="16"></td>
+                    <td align="left" valign="middle" nowrap class="Text02"><a href="javascript:;" class="Text02Link" onClick="location.href='logout.aspx'; return false;">登出</a></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              </table></td>
+            </tr>
+          <% end if %>
+          
+          <tr>
+            <td align="left" valign="top" height="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+              <tr>
+                <% if (noframe.length = 0) then %>
+                <td width="183" align="left" valign="top" style="padding-top: 10px">
+                <span class="List02">使用者：<%=userId%></span>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="LeftMenuTopLeft"><img src="images/spacer.gif" width="8" height="12"></td>
+                    <td class="LeftMenuTopCenter"><img src="images/spacer.gif" width="167" height="12"></td>
+                    <td class="LeftMenuTopRight"><img src="images/spacer.gif" width="13" height="12"></td>
+                    </tr>
+                  <tr>
+                    <td class="LeftMenuMidLeft">&nbsp;</td>
+                    <td align="left" valign="top" class="LeftMenuMidCenter"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tblMenu" runat="server">
+                      <tr>
+                        <td align="left" valign="middle" style="padding-left:10px" class="Line0201"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tblMenuText1" runat="server">
+                          <tr>
+                            <td width="20" align="left" valign="top"><a href="#" id="hlkExpand" runat="server"><img id="imgExpand" runat="server" src="images/Point02.gif" width="10" height="10" border="0"></a></td>
+                            <td align="left" valign="top"><a href="#" id="hlkMenu" runat="server" class="Text03Link">第一層選項</a></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      <tr>
+                        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tblMenu2" runat="server">
+                          <tr>
+                            <td align="left" valign="middle" style="padding-left:20px" class="Line0201"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tblMenuText2" runat="server">
+                              <tr>
+                                <td width="20" align="left" valign="top"><a href="#" id="hlkExpand2" runat="server"><img id="imgExpand2" runat="server" src="images/Point02.gif" width="10" height="10" border="0"></a></td>
+                                <td align="left" valign="top"><a href="#" id="hlkMenu2" runat="server" class="Text02Link">第二層選項</a></td>
+                                </tr>
+                              </table></td>
+                            </tr>
+                          <tr>
+                            <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tblMenu3" runat="server">
+                              <tr>
+                                <td align="left" valign="middle" style="padding-left:30px" class="Line0201"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tblMenuText3" runat="server">
+                                  <tr>
+                                    <td width="20" align="left" valign="top" style="padding-top:5px"><a href="#" id="hlkExpand3" runat="server"><img src="images/Point04.gif" width="2" height="2" border="0" align="absmiddle"></a></td>
+                                    <td align="left" valign="top"><a href="#" id="hlkMenu3" runat="server" class="Text02Link">第三層選項</a></td>
+                                    </tr>
+                                  </table></td>
+                                </tr>
+                              </table></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table></td>
+                    <td class="LeftMenuMidRight">&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <td valign="bottom" class="LeftMenuBotLeft"><img src="images/spacer.gif" width="8" height="12"></td>
+                    <td valign="bottom" class="LeftMenuBotCenter"><img src="images/spacer.gif" width="167" height="12"></td>
+                    <td valign="bottom" class="LeftMenuBotRight"><img src="images/spacer.gif" width="8" height="12"></td>
+                    </tr>
+                  </table></td>
+                <% end if %>
+                
+                <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="left" valign="top" id="tdNavigationPath" runat="server" class="List08"><a href="#" class="Text03Link">HOME</a> > <a href="#" class="Text03Link">Menu</a></td>
+                    </tr>
+                  
+                  <tr>
+                    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="SysBarTopLeft"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="SysBarTopCenter"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="SysBarTopRight"><img src="images/spacer.gif" width="10" height="12"></td>
+                        </tr>
+                      <tr>
+                        <td class="SysBarMidLeft">&nbsp;</td>
+                        <td align="center" valign="middle" class="SysBarMidCenter"><table width="98%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="left" valign="top" class="Title02" id="tdUnitName" runat="server">單元名稱</td>
+                            <td align="right" valign="middle"><table border="0" cellspacing="0" cellpadding="0" id="tblNavBtn" runat="server">
+                              <tr>
+                                <td align="left" valign="top" id="tdNavBack1" runat="server"><img src="images/Icon_Sys07.gif" width="15" height="15"></td>
+                                <td align="left" valign="middle" id="tdNavBack2" runat="server" class="Text02"><a href="#" id="hlkNavBack" runat="server" class="Text02Link">回上一層</a></td>
+                                <td align="left" valign="middle" id="tdNavBack3" runat="server" class="Point01">&nbsp;</td>
+                                <td align="left" valign="top" id="tdNavUnitSet1" runat="server"><img src="images/Icon_Sys02.gif" width="18" height="19"></td>
+                                <td align="left" valign="middle" id="tdNavUnitSet2" runat="server" class="Text02"><a href="#" id="hlkNavUnitSet" runat="server" class="Text02Link">單元設定</a></td>
+                                <td align="left" valign="middle" id="tdNavUnitSet3" runat="server" class="Point01">&nbsp;</td>
+                                <td align="left" valign="top" id="tdNavSearch1" runat="server"><img src="images/Icon_Sys03.gif" width="20" height="17"></td>
+                                <td align="left" valign="middle" id="tdNavSearch2" runat="server" class="Text02"><a href="javascript:;" id="hlkNavSearch" runat="server" class="Text02Link" onClick="clikker(searchTable)">搜尋</a></td>
+                                <td align="left" valign="middle" id="tdNavSearch3" runat="server" class="Point01">&nbsp;</td>
+                                <td align="left" valign="top" id="tdNavExport1" runat="server"><img src="images/Icon_Sys04.gif" width="15" height="15"></td>
+                                <td align="left" valign="middle" id="tdNavExport2" runat="server" class="Text02"><a href="#" id="hlkNavExport" runat="server" class="Text02Link">匯出</a></td>
+                                <td align="left" valign="middle" id="tdNavExport3" runat="server" class="Point01">&nbsp;</td>
+                                <td align="left" valign="top" id="tdNavAdd1" runat="server"><img src="images/Icon_Sys05.gif" width="16" height="16"></td>
+                                <td align="left" valign="middle" id="tdNavAdd2" runat="server" class="Text02"><a href="#" id="hlkNavAdd" runat="server" class="Text02Link">新增</a></td>
+                                <td align="left" valign="middle" id="tdNavAdd3" runat="server" class="Point01">&nbsp;</td>
+                                <td align="left" valign="top" id="tdNavImport1" runat="server"><img src="images/Icon_Sys04.2.gif" width="15" height="15"></td>
+                                <td align="left" valign="middle" id="tdNavImport2" runat="server" class="Text02"><a href="#" id="hlkNavImport" runat="server" class="Text02Link">匯入</a></td>
+                                <td align="left" valign="middle" id="tdNavImport3" runat="server" class="Point01">&nbsp;</td>
+                                </tr>
+                              </table></td>
+                            </tr>
+                          </table></td>
+                        <td class="SysBarMidRight">&nbsp;</td>
+                        </tr>
+                      <tr>
+                        <td class="SysBarBotLeft"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="SysBarBotCenter"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="SysBarBotRight"><img src="images/spacer.gif" width="10" height="12"></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  
+                  <tr>
+                    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="MainBoxTopLeft"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="MainBoxTopCenter"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="MainBoxTopRight"><img src="images/spacer.gif" width="10" height="12"></td>
+                        </tr>
+                      <tr>
+                        <td class="MainBoxMidLeft">&nbsp;</td>
+                        <td align="left" valign="top" class="MainBoxMidCenter"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td>
+                        <td class="MainBoxMidRight">&nbsp;</td>
+                        </tr>
+                      <tr>
+                        <td class="MainBoxBotLeft"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="MainBoxBotCenter"><img src="images/spacer.gif" width="10" height="12"></td>
+                        <td class="MainBoxBotRight"><img src="images/spacer.gif" width="10" height="12"></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  
+                  </table></td>
+                </tr>
+              </table></td>
+            </tr>
+          
+          <% if (noframe.length = 0) then %>
+          <% end if %>
+          
+        </table></td>
+        </tr>
+      <tr>
+        <td align="left" valign="bottom" class="MainBotCenter"></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="27" align="left" valign="top" class="Botbg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="bottom" class="BotLeft"></td>
+        <td align="left" valign="bottom" class="BotCenter">&nbsp;</td>
+        <td align="left" valign="bottom" class="BotRight"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+<script language="JavaScript">
+<!--
+function mmLoadMenus() {
+<%=outMenu%>
+} // mmLoadMenus()
+//-->
+</script>
+<script language="JavaScript" src="../js/mm_menu.js"></script>
+<script language="JavaScript1.2">mmLoadMenus();</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--  
+function clikker(block) {
+  if (block.style.display =='') {
+    block.style.display = 'none';
+  }
+  else {
+    block.style.display='';
+  }
+}
+function myclick(o, id) {
+
+	var img = o.firstChild;
+	var block = document.getElementById(id);
+	
+	if (block.style.display == '') {
+		block.style.display = 'none';
+		img.src = "images/Point02.gif";
+	} else {
+		block.style.display = '';
+		img.src = "images/Point02(-).gif";
+	}
+}
+
+<%=blk%>
+
+//-->
+</script>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<resource>
+  <site_config>
+    <!-- valid value: 0 or 1-->
+  	<deploy_mode>1</deploy_mode>
+  	<db_name>pqi</db_name>
+  	<epaper_max_recipient_count>50</epaper_max_recipient_count>
+  </site_config>
+</resource>

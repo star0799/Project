@@ -1,0 +1,46 @@
+﻿<%@ master language="VB" CodeFile="window.master.vb" inherits="deskmanager_window" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>後台管理系統</title>
+<style type="text/css">
+<!--
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+-->
+</style>
+<link href="web.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="../js/jquery.js"></script>
+</head>
+
+<body class="Bg"><form id="form1" runat="server">
+<asp:ScriptManager ID="ScriptManager1" EnableScriptGlobalization="true" EnableScriptLocalization="true" runat="server" >
+</asp:ScriptManager>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="MainBoxTopLeft"><img src="images/spacer.gif" width="10" height="12"></td>
+        <td class="MainBoxTopCenter"><img src="images/spacer.gif" width="10" height="12"></td>
+        <td class="MainBoxTopRight"><img src="images/spacer.gif" width="10" height="12"></td>
+        </tr>
+      <tr>
+        <td class="MainBoxMidLeft">&nbsp;</td>
+        <td align="left" valign="top" class="MainBoxMidCenter"><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td>
+        <td class="MainBoxMidRight">&nbsp;</td>
+        </tr>
+      <tr>
+        <td class="MainBoxBotLeft"><img src="images/spacer.gif" width="10" height="12"></td>
+        <td class="MainBoxBotCenter"><img src="images/spacer.gif" width="10" height="12"></td>
+        <td class="MainBoxBotRight"><img src="images/spacer.gif" width="10" height="12"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

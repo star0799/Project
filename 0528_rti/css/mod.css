@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+/*contentTool*/
+.exp-Txt{
+	font-size: 15px;
+	color: #666;
+	padding: 5px 5px 5px 8px;
+	line-height: 1.6em;
+}
+.contentTool{
+	color:#666;
+	height:35px;
+	padding:0 10px 0 8px;
+}
+.contentTool .btn-class{
+	font-size:13px;
+	background: #5b5e61 url(../images/btnbg1.png) repeat-x 0 0;
+	color: #FFF;
+	height:26px;
+	padding: 0 13px 0 13px;
+	border: 1px solid #333;
+	box-shadow:1px 1px 0px 0px rgba(100%,100%,100%,1) inset;
+}
+.contentTool a{
+	color:#666;
+	text-decoration:none;
+}
+.contentTool a:hover{
+	color:#e03401;
+	text-decoration:underline;
+}
+.contentTool span{
+	color:#d98500;
+	
+}
+
+/*News*/
+.news .newslist{
+	width:100%;
+	padding: 0 2px 8px 2px;
+}
+
+.news .newslist th{
+	padding:3px 0 5px 0;
+	height: 26px;
+	border: #fff solid;
+	border-width: 0 0 0 1px;
+	font-size:16px;
+	font-weight:normal;	
+	background: #ccc;
+}
+.news .newslist td{
+	padding: 10px 5px 8px 5px;	
+	font-size:13px;
+	border: #ccc dashed ;
+	border-width: 0 0 1px  0;
+}
+.news .newslist td a{
+	color:#e03401;
+	text-decoration:none;	
+}
+.news .newslist td a:hover{
+	text-decoration:underline;	
+}
+.news .newslist td span{
+	padding: 1px 8px 2px 8px;
+	background:#e03401;
+	color:#FFF;
+}
+.PageTool{
+	background: #eaeaeb;
+	padding: 5px 10px ;
+}
+.PageTool td{
+	padding: 2px;
+}
+
+.cnews-class th{
+	background: #414244;
+	color: #e2e2e2;
+	font-weight: normal;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	padding:8px 5px 8px 5px
+}
+.cnews-class td{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	padding:8px 5px 8px 5px;
+	text-align:center;
+}
+.cnews-class td a{
+	display:block;
+	width:100%;
+	padding-bottom:3px;
+	font-weight:bold;
+	color:#e03401;
+	text-decoration:none;
+}
+.cnews-class td a:hover{
+	color:#e03401;
+	text-decoration:underline;
+}
+.cnews-class .titleTxt{
+	background: #000 url(../images/titlebg2.png) repeat-x 0 0;
+	height:40px;
+	color:#FFF;
+	font-size:16px;
+}
+
+/*Peo*/
+
+.peoTab{
+	
+}
+.people .block-list {
+	width: 755px;
+	color: #333;
+	background-color: #e8e8e8;
+	border: 10px solid #e8e8e8;
+}
+.people .block-list ul {
+	width: 755px;
+	margin: 0;
+	padding: 1px 0 0 1px;
+	list-style-type: none;
+	overflow: hidden;
+}
+.people .block-list li {
+	width: 151px;
+	float: left;
+	margin: -1px 0 0 -1px;
+}
+.people .block-list li a {
+	display: block;
+	padding: 12px 5px 12px 5px;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	position: relative;
+	text-decoration: none
+}
+.people .block-list li a:hover {
+	color: #e73500;
+	background-color: #fff9e9;
+	border-color: #f60;
+	z-index: 10;
+}
+.people .block-list li a h2 {
+	font-size: 15px;
+	padding: 4px 0 0 0;
+}
+.people .block-list li a h3 {
+	display: block;
+	margin-top: 5px;
+	font-size: 13px;
+	font-weight:normal;
+	color: #636363;
+	background-color: transparent;
+}
+
+.people .line1{
+	background:url(../images/line2.png) repeat-y center 0;
+	width:10px;
+}
+.people .peopic{
+	width:130px;	
+}
+.people .peopic img{
+	padding:1px;
+	background-color: #FFF;
+	border: 1px solid #CCC;	
+}
+.people .txt p{
+	font-size:13px;
+	line-height: 1.8em;
+}
+.people .txt h2{
+	font-size:18px;
+	color:#333;
+	display:block;
+	padding: 0 0 5px 0 ;
+}
+.people .txt h3{
+	font-size:15px;
+	color:#f23113;
+	display:block;
+	padding:12px 0 0 0;
+	
+}
+
+/*album*/
+
+.album .block-list {
+	width: 760px;
+	color: #333;
+}
+.album .block-list ul {
+	width: 760px;
+	margin: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+.album .block-list li {
+	width: 180px;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	margin:5px;
+	
+}
+.album .block-list li a.pic img{
+	width:175px;
+	height:160px;
+	padding:1px;
+}
+.album .block-list li a.pic {
+	display: block;
+	padding:4px 0 0 0;	
+	border: 2px solid #ccc;
+}
+.album .block-list li a.pic:hover {
+	color: #e73500;
+	background-color: #f90;
+	border-color: #f60;
+	z-index: 10;
+}
+
+.album .block-list li h3 {
+	display: block;
+	margin:3px 0 5px 0;
+	margin-top: 3px;
+	font-size: 13px;
+	font-weight:normal;
+	color: #636363;
+	background-color: transparent;
+}
+
+.album .block-list li h3 a{
+	color: #636363;
+	font-size: 13px;
+	text-decoration:none;
+}
+.album .block-list li h3 a:hover{
+	color: #636363;
+	font-size: 13px;
+	text-decoration:underline;
+}
