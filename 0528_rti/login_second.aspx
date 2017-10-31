@@ -27,16 +27,16 @@
     }
 </style>
 <div style="margin:20px;margin-left:40px">
-<h4 class="title">歡迎登入 </h4>
+<h4 class="title">VIP會員申請</h4>
     <div class="form-horizontal">
         <div class="form-group">
-            <label class="col-sm-2 control-label">姓名：</label>
-            <div class="col-sm-4">
+            <label class="col-sm-2 control-label"><span class="iconstyle">*</span>姓名：</label>
+            <div class="col-sm-5">
                 <input type="text" class="form-control" placeholder="姓名" id="naper" name="naper" />              
             </div>
         </div>
          <div class="form-group">
- <label class="col-sm-2 control-label">性別：</label>
+ <label class="col-sm-2 control-label"><span class="iconstyle">*</span>性別：</label>
             <div class="form-inline col-sm-4">
                 <select  class="form-control col-sm-12">
                     <option value="">請選擇</option>
@@ -67,8 +67,8 @@
         </div>
 
          <div class="form-group ">
-              <label class="col-sm-2 control-label">生日：</label>
-            <div class="col-sm-3">
+              <label class="col-sm-2 control-label"><span class="iconstyle">*</span>生日：</label>
+            <div class="col-sm-5">
                <input type="date" class="form-control" value="2012-05-15 21:05" id="datetimepicker" >
             </div>     
         </div>
@@ -79,7 +79,7 @@
             </div>
         </div>
          <div class="form-group ">
-            <label class="col-sm-2 control-label ">手機：</label>
+            <label class="col-sm-2 control-label "><span class="iconstyle">*</span>手機：</label>
             <div class="col-sm-5  ">
                 <input type="text" class="form-control" placeholder="手機" id="aa" name="cc" />
             </div>
