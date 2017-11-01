@@ -40,7 +40,7 @@
          <div class="form-group">
             <label class="col-sm-2 control-label"><span class="iconstyle">*</span>密碼：</label>
             <div class="col-sm-5">
-                <input type="password" class="form-control" placeholder="請輸入信箱" id="naper" name="naper" />
+                <input type="password" class="form-control" placeholder="請輸密碼" id="naper" name="naper" />
             </div>
         </div>
         <div class="form-group">

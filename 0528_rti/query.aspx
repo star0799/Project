@@ -27,5 +27,4 @@
     </asp:ListView>
     <uc:pager ID="Pager1" runat="server" />
   </div>
-  </div>
 </asp:Content>

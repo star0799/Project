@@ -54,7 +54,8 @@ Partial Class controls_top
     Protected Sub hlkLogin_ServerClick(sender As Object, e As System.EventArgs) Handles hlkLogin.ServerClick
         'Response.Redirect(String.Format("http://www.rti.org.tw/login2/?done={0}&eventId=arch", HttpUtility.UrlEncode(fullRawUrl)))
         userController.userLogin("test", "test name", Nothing, Nothing)
-        Response.Redirect(fullRawUrl)
+        'Response.Redirect(fullRawUrl)  改
+        Response.Redirect("Login_first.aspx")
     End Sub
 End Class
 

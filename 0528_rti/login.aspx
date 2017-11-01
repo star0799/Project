@@ -2,6 +2,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <link href="boostrap/css/bootstrap.min.css" rel="stylesheet" />
 <style>
     
 .title {
@@ -45,6 +46,24 @@
             <input id="password" type="password" class="form-control col-sm-2" style="width:285px" name="password" placeholder="Password">
         </div>
   </div>   
+
+        <div class="form-group" >
+         <label class="col-sm-2 control-label"><span class="iconstyle">*</span>驗證碼：</label>
+        <div class="input-group" style="margin-left:20px">
+            <input id="cod" type="password" class="form-control col-sm-4"  name="password" >
+        </div>
+  </div>  
+
+   <div class="form-group" >
+         <label class="col-sm-2 control-label"></label>
+        <div class="input-group" style="margin-left:20px">    
+               
+         <label style="width:195px;height:35px;background-color:#886600;margin-top:5px">
+                <span style="font-size:22px;padding-left:50px;padding-top:5px">124565</span>  
+          </label>               
+             <button type="button" style="width:80px;text-align:left;margin-left:5px; " class="btn btn-success " onclick="onSearch();">重新選取</button>            
+        </div>          
+  </div>  
         <div class="form-group" style="text-align:right" >
             <div class="col-sm-offset-2 col-sm-5">
                 <button type="button" style="width:70px;" class="btn btn-primary " onclick="onSearch();">確定</button>

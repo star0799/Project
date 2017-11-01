@@ -36,14 +36,13 @@
             </div>
         </div>
          <div class="form-group">
-              <label class="col-sm-2 control-label">性別：</label>
+ <label class="col-sm-2 control-label">性別：</label>
             <div class="form-inline col-sm-4">
                 <select  class="form-control col-sm-12">
                     <option value="">請選擇</option>
                     <option value="1">男</option>
                     <option value="2">女</option>
-                </select>
-            </div>
+                </select>            </div>
         </div>
          <div class="form-group">
               <label class="col-sm-2 control-label">教育程度：</label>
