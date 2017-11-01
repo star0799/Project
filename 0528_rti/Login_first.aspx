@@ -29,7 +29,7 @@
 </style>
 
 <div style="margin:20px;margin-left:40px;" >
-<h4 class="title">歡迎登入 </h4>
+<h4 class="title">會員註冊</h4>
     <div class="form-horizontal">
           <div class="form-group ">
             <label class="col-sm-2 control-label "><span class="iconstyle">*</span>帳號：</label>
@@ -40,18 +40,17 @@
          <div class="form-group">
             <label class="col-sm-2 control-label"><span class="iconstyle">*</span>密碼：</label>
             <div class="col-sm-5">
-                <input type="password" class="form-control" placeholder="請輸密碼" id="naper" name="naper" />
-            </div>
+<input type="password" class="form-control" placeholder="請輸密碼" id="naper" name="naper" />            </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-2 control-label">電子郵件：</label>
-            <div class="col-sm-6">
+            <label class="col-sm-2 control-label"><span class="iconstyle">*</span>Email：</label>
+            <div class="col-sm-5">
                 <input type="text" class="form-control" placeholder="請輸入信箱" id="naper" name="naper" />
             </div>
         </div>
  
          <div class="form-group ">
-               <label class="col-sm-2 control-label">國別：</label>
+               <label class="col-sm-2 control-label"><span class="iconstyle">*</span>國別：</label>
             <div class="form-inline col-sm-4">
                 <select id="Kdper" name="Kdper" class="form-control col-sm-4">
                     <option value="">1</option>
@@ -61,7 +60,7 @@
             </div>
       </div>
            <div class="form-group ">
-               <label class="col-sm-2 control-label">語言：</label>
+               <label class="col-sm-2 control-label"><span class="iconstyle">*</span>語言：</label>
                 <div class="form-inline col-sm-4">
                     <label class="checkbox-inline" ><input type="checkbox" value="">中文</label>
                     <label class="checkbox-inline" style="margin-left:10px"><input type="checkbox" value="">英文</label>
