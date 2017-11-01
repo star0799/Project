@@ -27,7 +27,7 @@
     }
 </style>
 <div style="margin:20px;margin-left:40px">
-<h4 class="title">歡迎登入 </h4>
+<h4 class="title">會員資料</h4>
     <div class="form-horizontal">
         <div class="form-group">
             <label class="col-sm-2 control-label"><span class="iconstyle">*</span>姓名：</label>
@@ -70,7 +70,7 @@
          <div class="form-group ">
               <label class="col-sm-2 control-label"><span class="iconstyle">*</span>生日：</label>
             <div class="col-sm-3">
-               <input type="date" class="datetimepicker form-control" value="2012-05-15 21:05" id="birth" >
+               <input type="date" class="datetimepicker form-control" id="birth" >
             </div>     
         </div>
          <div class="form-group ">
@@ -82,20 +82,20 @@
          <div class="form-group ">
             <label class="col-sm-2 control-label "><span class="iconstyle">*</span>手機：</label>
             <div class="col-sm-5  ">
-                <input type="text" class="form-control" placeholder="手機" id="phone" name="cc" />
+                <input type="text" class="form-control" placeholder="手機" id="phone"  onkeypress='if (event.keyCode!=46 && (event.keyCode < 48 || event.keyCode > 57)) event.returnValue=false' />
             </div>
         </div>
           <div class="form-group ">
             <label class="col-sm-2 control-label ">地址：</label>
             <div class="col-sm-5  ">
-                <input type="text" class="form-control" placeholder="地址" id="addr"  />
+                <input type="text" class="form-control" placeholder="地址" id="addr"  /> 
             </div>
         </div>
 
     </div>
         <div class="form-group" >
             <div class="col-sm-offset-2 col-sm-5" style="text-align:right">
-                <button type="button" style="width:70px;" class="btn btn-primary "  onclick="onSearch();">確認</button>
+                <button type="button" style="width:70px;margin-bottom:10px" class="btn btn-primary "  onclick="onSearch();">確認</button>
             </div>
         </div>
     </div>
@@ -105,7 +105,53 @@
               viewMode: 'years',
               format: 'MM/YYYY'
           });
-
       });
+      function onSearch() {
+          var name = $("#nam").val();
+          var sex = $("#sex").val();
+          var edu = $("#edu").val();
+          var job = $("#job").val();
+          var birth = $("#birth").val();
+          var phone = $("#phone").val();
+          var addr = $("#addr").val();
+
+        
+          if (name == "") {
+              alert("請輸入姓名");
+              return false;
+          } else if (sex == "") {
+              alert("請選擇性別");
+              return false;
+          } else if (edu == "") {
+              alert("請選擇教育程度");
+              return false;
+          } else if (job == "") {
+              alert("請選擇職業");
+              return false;
+          } else if (birth == "") {
+              alert("請擇生日");
+              return false;
+              if (birth.length != 10) {
+                  alert("生日格式有誤請檢查");
+                  return false;
+              }
+          } else if (phone == "")
+          {
+              alert("請輸入手機");
+              return false;
+             
+          } else if (phone.length != "10")
+          {
+              alert("手機號碼格式有誤請檢查");
+              return false;
+          }
+          else if (addr == "")
+          {
+              alert("請輸入地址");
+              return false;
+          }
+          alert("成功!!");
+      }
+ 
     </script>
 </asp:Content>

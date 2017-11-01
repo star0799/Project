@@ -35,22 +35,22 @@
    <div class="form-group" >
          <label class="col-sm-2 control-label"><span class="iconstyle">*</span>帳號：</label>
             <div class="input-group" style="margin-left:20px">
-                <span class="input-group-addon "><i class="glyphicon glyphicon-user"></i></span>
-                <input id="password" type="password" class="form-control" style="width:285px" name="password" placeholder="Password">
+                <span class="input-group-addon "><%--<i class="glyphicon glyphicon-user"></i>--%></span>
+                <input id="account" type="text" class="form-control" style="width:285px"  placeholder="帳號">
             </div>
   </div>         
     <div class="form-group" >
          <label class="col-sm-2 control-label"><span class="iconstyle">*</span>密碼：</label>
         <div class="input-group" style="margin-left:20px">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input id="password" type="password" class="form-control col-sm-2" style="width:285px" name="password" placeholder="Password">
+            <span class="input-group-addon"><%--<i class="glyphicon glyphicon-lock"></i>--%></span>
+            <input id="password" type="password" class="form-control col-sm-2" style="width:285px" name="password" placeholder="密碼">
         </div>
   </div>   
 
         <div class="form-group" >
          <label class="col-sm-2 control-label"><span class="iconstyle">*</span>驗證碼：</label>
         <div class="input-group" style="margin-left:20px">
-            <input id="cod" type="password" class="form-control col-sm-4"  name="password" >
+            <input id="vaildcode" type="text" class="form-control col-sm-4"  name="password" >
         </div>
   </div>  
 
@@ -59,9 +59,9 @@
         <div class="input-group" style="margin-left:20px">    
                
          <label style="width:195px;height:35px;background-color:#886600;margin-top:5px">
-                <span style="font-size:22px;padding-left:50px;padding-top:5px">124565</span>  
+                <span style="font-size:22px;padding-left:50px;padding-top:5px" id="checkvaild">124565</span>  
           </label>               
-             <button type="button" style="width:80px;text-align:left;margin-left:5px; " class="btn btn-success " onclick="onSearch();">重新選取</button>            
+            <%-- <button type="button" style="width:80px;text-align:left;margin-left:5px; " class="btn btn-success " onclick="onSearch();">重新選取</button>--%>
         </div>          
   </div>  
         <div class="form-group" style="text-align:right" >
@@ -74,8 +74,30 @@
     
         
       <script >
-          function onSearch() {
-              alert("a");
+          function onSearch()
+          {
+              var account = $("#account").val();
+              var password = $("#password").val();
+              var vaildcode = $("#vaildcode").val();
+              var checkvaild = $("#checkvaild").text();
+              if (account == "")
+              {
+                  alert("請輸入帳號");
+                  return false;
+              } else if (password=="")
+              {
+                  alert("請輸入密碼");
+                  return false;
+              } else if (vaildcode == "")
+              {
+                  alert("請輸入驗證碼");
+                  return false;
+              } else if (vaildcode != checkvaild)
+              {
+                  alert("驗證碼有誤請重新輸入");
+                  return false;
+              }
+              alert("成功!!");
           }
     </script>
 </asp:Content>

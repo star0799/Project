@@ -4,7 +4,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <link href="boostrap/css/bootstrap.min.css" rel="stylesheet" />
 <style>
-    
+
+    body {
+     font-family: 微軟正黑體, "Microsoft JhengHei", Arial, sans-serif;
+    }
 .title {
     margin: 20px 0 30px 0;
     font-family: 微軟正黑體, "Microsoft JhengHei", Arial, sans-serif;
@@ -30,33 +33,38 @@
 </style>
 
 <div style="margin:20px;margin-left:40px;" >
-<h4 class="title">歡迎登入 </h4>
+<h4 class="title">會員註冊 </h4>
     <div class="form-horizontal">
           <div class="form-group ">
             <label class="col-sm-2 control-label "><span class="iconstyle">*</span>帳號：</label>
             <div class="col-sm-5  ">
-                <input type="text" class="form-control" placeholder="請輸入帳號" id="naper" name="naper" />
+                <input type="text" class="form-control" placeholder="請輸入帳號" id="account" />
             </div>
+             <%-- <div style="margin-top:5px">
+      <span style="color:red;margin-top:10px">帳號英文數字總共應至少要６個</span>
+                  </div>--%>
         </div>
          <div class="form-group">
 
             <label class="col-sm-2 control-label"><span class="iconstyle">*</span>密碼：</label>
             <div class="col-sm-5">
-                <input type="password" class="form-control" placeholder="請輸入信箱" id="naper" name="naper" />
-
+                <input type="password" class="form-control"  id="password" />
+              </div>
+                <%-- <div style="margin-top:5px">
+                     <span style="color:red;margin-top:10px">密碼必需英文數字混合應至少要６個</span>
+                 </div>--%>
         </div>
-             </div>
         <div class="form-group">
             <label class="col-sm-2 control-label"><span class="iconstyle">*</span>電子郵件：</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="請輸入信箱" id="naper" name="naper" />
+                <input type="text" class="form-control" placeholder="請輸入信箱" id="email" />
             </div>
         </div>
  
          <div class="form-group ">
                <label class="col-sm-2 control-label"><span class="iconstyle">*</span>國別：</label>
             <div class="form-inline col-sm-4">
-                <select id="Kdper" name="Kdper" class="form-control col-sm-4">
+                <select id="country"  class="form-control col-sm-4">
                     <option value="">請選擇</option>
                     <option value="1">安道爾</option>
                     <option value="2">阿聯</option>
@@ -88,20 +96,20 @@
            <div class="form-group ">
                <label class="col-sm-2 control-label"><span class="iconstyle">*</span>語言：</label>
                    <div class="form-inline col-sm-10">
-                    <label class="checkbox-inline" style="margin-left:10px" ><input type="checkbox" value="">華語Mandarin</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">閩南語Minnan</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">客家語Hakka</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">粵語Cantonese</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">英語 English</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="">德語 German</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">法語French</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">俄語Russian</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="">西班牙語Spanish</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">日語Japanese</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">越南語Vietnamese</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">泰語Thai</label>
-                    <label class="checkbox-inline" ><input type="checkbox" value="">印尼語Indonesian</label> 
-                    <label class="checkbox-inline" ><input type="checkbox" value="">其他other</label>
+                    <label class="checkbox-inline control-label" style="margin-left:10px" ><input type="checkbox" class="radioBtnClass"  value="華語Mandarin">華語Mandarin</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="閩南語Minnan">閩南語Minnan</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="客家語Hakka">客家語Hakka</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="粵語Cantonese">粵語Cantonese</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="English">英語 English</label>
+                    <label class="checkbox-inline"><input type="checkbox" class="radioBtnClass" value="德語German">德語German</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="法語French">法語French</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="俄語Russian">俄語Russian</label>
+                    <label class="checkbox-inline"><input type="checkbox" class="radioBtnClass" value="西班牙語Spanish">西班牙語Spanish</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="日語Japanese">日語Japanese</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="越南語Vietnamese">越南語Vietnamese</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="泰語Thai">泰語Thai</label>
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="印尼語Indonesian">印尼語Indonesian</label> 
+                    <label class="checkbox-inline" ><input type="checkbox" class="radioBtnClass" value="其他other">其他other</label>
                 </div>
             </div>    
         <div class="form-group" >
@@ -114,7 +122,76 @@
       <script language="javascript" type="text/javascript">
           function onSearch()
           {
-              alert("a");
+              var account = $("#account").val();
+              var password = $("#password").val();
+              var email = $("#email").val();
+              var country = $("#country").val();
+             
+              //語言
+              var langu = [];
+              $("input[type='checkbox'].radioBtnClass").each(function () {
+                  if ($(this).prop("checked")) {
+                      langu.push($(this).val());
+                  }
+              });
+             
+
+              if (account == "")
+              {
+                  alert("請輸入帳號");
+                  return false;
+              }
+              if (password == "")
+              {
+                  alert("請輸入密碼");
+                  return false;
+              }
+              //var chkpwd = validPassword(password);
+              //if (chkpwd == false)
+              //{
+              //    alert("密碼必須要英數混和至少六個，請檢查");
+              //    return false;
+              //}
+              if (email == "")
+              {
+                  alert("請輸入信箱");
+                  return false;
+              }
+              var chkemail = validEmail(email);
+              if (chkemail == false)
+              {
+                  alert("電子郵件格式有誤，請檢查");
+                  return false;
+              }
+              if (country == "")
+              {
+                  alert("請選擇國家");
+                  return false;
+              }
+              if (langu == "")
+              {
+                  alert("請選擇語言");
+                  return false;
+              }
           }
+      
+         // 驗證帳號
+          function validAccount(account) {
+              //var accountRule = /{5,14}$/g;
+              return accountRule.test(account);
+          }
+          //驗證密碼
+          function validPassword(password)
+          {
+              var passwordRule = /^[A-Za-z][0-9A-Za-z_]{5,14}$/g;
+              return passwordRule.test(password);
+          }
+          //驗證email
+          function validEmail(email) {
+              var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/g;
+              return emailRule.test(email);
+          }
+
+    
     </script>
 </asp:Content>
