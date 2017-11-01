@@ -33,16 +33,16 @@
 <h4 class="title">歡迎登入 </h4>
     <div class="form-horizontal" ">
    <div class="form-group" >
-         <label class="col-sm-2 control-label">帳號：</label>
+         <label class="col-sm-2 control-label"><span class="iconstyle">*</span>帳號：</label>
             <div class="input-group" style="margin-left:20px">
-                <%--<span class="input-group-addon "><i class="glyphicon glyphicon-user"></i></span>--%>
-                <input id="username"  class="form-control" style="width:285px" name="username" placeholder="Username">
+                <span class="input-group-addon "><i class="glyphicon glyphicon-user"></i></span>
+                <input id="password" type="password" class="form-control" style="width:285px" name="password" placeholder="Password">
             </div>
   </div>         
     <div class="form-group" >
-         <label class="col-sm-2 control-label">密碼：</label>
+         <label class="col-sm-2 control-label"><span class="iconstyle">*</span>密碼：</label>
         <div class="input-group" style="margin-left:20px">
-            <%--<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>--%>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
             <input id="password" type="password" class="form-control col-sm-2" style="width:285px" name="password" placeholder="Password">
         </div>
   </div>   

@@ -31,20 +31,10 @@
                   </table></td>
                 <td align="left" valign="top"><h2><%=p_title%></h2>
                   <p><%=getTailText(rdesc,250)%></p>
-                  <a href="#" id="hlkOrder" runat="server" class="showBtn">我要訂購 
-                    </a>
-                    <%--新增--%>
-                    <audio src="music/NieR%20Automata%20OST%20-%20Pascal.mp3" controls="controls" preload="autoplay ">
-                        <p>Your browser does not support the <code>audio</code> element </p>
-                    </audio>                 
-                    <%--新增--%>
-                </td>      
-                  
+                  <a href="#" id="hlkOrder" runat="server" class="showBtn">我要訂購</a></td>
               </tr>
-              
             </table></td>
         </tr>
-          
         <tr id="trImg" runat="server">
           <td><asp:ListView ID="lvwList" runat="server" OnItemDataBound="lvwList_ItemDataBound" OnDataBound="lvwList_DataBound">
               <LayoutTemplate>

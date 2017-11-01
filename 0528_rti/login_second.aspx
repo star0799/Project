@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="false" masterpagefile="~/container.master" CodeFile="Login_first.aspx.cs" Inherits="Login_first" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-
+<link href="boostrap/css/bootstrap.min.css" rel="stylesheet" />
 <style>
 .title {
     margin: 20px 0 30px 0;
@@ -27,26 +27,28 @@
     }
 </style>
 <div style="margin:20px;margin-left:40px">
-<h4 class="title">VIP會員申請</h4>
+<h4 class="title">歡迎登入 </h4>
     <div class="form-horizontal">
         <div class="form-group">
             <label class="col-sm-2 control-label"><span class="iconstyle">*</span>姓名：</label>
-            <div class="col-sm-5">
-                <input type="text" class="form-control" placeholder="姓名" id="naper" name="naper" />              
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="姓名" id="nam" />              
             </div>
         </div>
          <div class="form-group">
- <label class="col-sm-2 control-label">性別：</label>            <div class="form-inline col-sm-4">
-                <select  class="form-control col-sm-12">
+              <label class="col-sm-2 control-label"><span class="iconstyle">*</span>性別：</label>
+            <div class="form-inline col-sm-4">
+                <select  class="form-control col-sm-12" id="sex">
                     <option value="">請選擇</option>
                     <option value="1">男</option>
                     <option value="2">女</option>
-                </select>            </div>
-        </div>
+              </select>
+                </div>
+     </div>
          <div class="form-group">
               <label class="col-sm-2 control-label">教育程度：</label>
             <div class="form-inline col-sm-4">
-                <select  class="form-control col-sm-12">
+                <select  class="form-control col-sm-12" id="edu">
                     <option value="">請選擇</option>
                     <option value="1">大學</option>
                     <option value="2">高中</option>
@@ -57,7 +59,7 @@
            <div class="form-group">
               <label class="col-sm-2 control-label">職業：</label>
             <div class="form-inline col-sm-4">
-                <select  class="form-control col-sm-12">
+                <select  class="form-control col-sm-12" id="job">
                     <option value="">請選擇</option>
                     <option value="1">軍人</option>
                     <option value="2">工程</option>
@@ -67,20 +69,26 @@
 
          <div class="form-group ">
               <label class="col-sm-2 control-label"><span class="iconstyle">*</span>生日：</label>
-            <div class="col-sm-5">
-               <input type="date" class="form-control" value="2012-05-15 21:05" id="datetimepicker" >
+            <div class="col-sm-3">
+               <input type="date" class="datetimepicker form-control" value="2012-05-15 21:05" id="birth" >
             </div>     
         </div>
          <div class="form-group ">
             <label class="col-sm-2 control-label ">通訊軟體：</label>
             <div class="col-sm-5  ">
-                <input type="text" class="form-control" placeholder="通訊軟體" id="aa" name="cc" />
+                <input type="text" class="form-control" placeholder="通訊軟體" id="line" name="cc" />
             </div>
         </div>
          <div class="form-group ">
             <label class="col-sm-2 control-label "><span class="iconstyle">*</span>手機：</label>
             <div class="col-sm-5  ">
-                <input type="text" class="form-control" placeholder="手機" id="aa" name="cc" />
+                <input type="text" class="form-control" placeholder="手機" id="phone" name="cc" />
+            </div>
+        </div>
+          <div class="form-group ">
+            <label class="col-sm-2 control-label ">地址：</label>
+            <div class="col-sm-5  ">
+                <input type="text" class="form-control" placeholder="地址" id="addr"  />
             </div>
         </div>
 
@@ -93,7 +101,7 @@
     </div>
      <script language="javascript" type="text/javascript">
       $(document).ready(function () {
-          $('#datetimepicker10').datetimepicker({
+          $('.datetimepicker').datetimepicker({
               viewMode: 'years',
               format: 'MM/YYYY'
           });
